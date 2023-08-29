@@ -29,20 +29,20 @@ function ArticleDetail() {
                             <img src={gift_icon} alt={"gift-icon"} className="gift-icon"></img>
                             <span>Share full article</span>
                         </div>
-                    <div className="article-share-div"> <img  src={share_icon} className="article-share-icon" alt={"share-icon"}></img></div> 
-                    <div className="article-share-div"> <img  src={save_icon} className="article-save-icon" alt={"save-icon"}></img></div> 
+                        <div className="article-share-div"> <img src={share_icon} className="article-share-icon" alt={"share-icon"}></img></div>
+                        <div className="article-share-div"> <img src={save_icon} className="article-save-icon" alt={"save-icon"}></img></div>
 
                     </div>
                     <div className="article-middle-div">
-                                <figure className="article-figure">
-                                    <div>
-                                        <img src={worldnews.multimedia[1].url} alt={`${worldnews.multimedia[1].caption}`}></img>
-                                    </div>
-                                    <figcaption className="article-fig-caption">
-                                        {worldnews.multimedia[1].caption}
-                                    </figcaption>
-                                    <div className="article-img-copyright">{worldnews.multimedia[1].copyright}</div>
-                                </figure>
+                        <figure className="article-figure">
+                            <div>
+                                <img src={worldnews.multimedia[1].url} alt={`${worldnews.multimedia[1].caption}`}></img>
+                            </div>
+                            <figcaption className="article-fig-caption">
+                                {worldnews.multimedia[1].caption}
+                            </figcaption>
+                            <div className="article-img-copyright">{worldnews.multimedia[1].copyright}</div>
+                        </figure>
                     </div>
 
                 </div>

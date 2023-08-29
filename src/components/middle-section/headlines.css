@@ -29,3 +29,8 @@
     font-family: "cheltanham-std-light";
     src:url("../../assets/fonts/CHELTENHAMSTDLIGHT.OTF")
 }
+
+@font-face {
+    font-family: "custom-georgia-regular";
+    src: url("../../assets/fonts/GEORGIA.TTF");
+}
