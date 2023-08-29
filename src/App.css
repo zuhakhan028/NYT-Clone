@@ -1,0 +1,22 @@
+.App{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 99.9%;
+
+
+}
+.inner-app-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.middle-section{
+  width: 1200px;
+margin-top: 45px;
+
+}
+

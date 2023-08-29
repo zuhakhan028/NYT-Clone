@@ -1,0 +1,24 @@
+
+.country-section::after{
+margin-right: 8px;
+margin-left: 8px;
+height: 11px;
+vertical-align: -3px;
+border: 1px solid rgba(223, 223, 223, 1);
+content: "";
+display: inline-block;
+cursor: pointer;
+}
+
+.country-section{
+    cursor: pointer;
+}
+
+.country-link{
+    text-decoration: none;
+    color: black;
+}
+
+.country-link:hover{
+   text-decoration: underline;
+}

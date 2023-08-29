@@ -1,0 +1,84 @@
+.mini-highlight-div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 29px;
+    margin-top: 30px;
+    padding-bottom: 0;
+    border-top: 1px solid var(--color-stroke-quaternary);
+    font-family: 'EB Garamond', serif;
+ 
+}
+
+
+
+.mini-highlight-list{
+    display: flex;
+    flex-direction: row;  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+    
+   
+}
+.mini-highlight-img{
+width:207px;
+height: 137px;
+float: none;
+transform: translateY(-7px);
+margin-right: 0;
+object-fit: contain;
+
+
+}
+.mini-highlight-title{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 0 0 5px 0;
+  
+}
+.mini-highlight-inner-div{
+    width: 200px; 
+    padding: 0 27px 0 20px;
+    border-right:  1px solid var(--color-stroke-quaternary);
+   
+}
+
+.first-item{
+    width: 200px;
+    align-items: left; 
+    padding-left: 0;
+    padding-right: 27px;
+}
+
+.last-item{
+    width: 200px;
+    padding-right: 0;
+    border-right: none;
+  
+}
+
+.highlight-li-inner-div{
+   bottom: 10px;
+}
+
+.mini-highlight-figure{
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.mini-highlight-inner-div:hover p {
+    text-decoration: underline;
+}
+.mini-highlight-title{
+    margin-top: 0;
+}
+
+
+@media (max-width: 768px) {
+   
+}

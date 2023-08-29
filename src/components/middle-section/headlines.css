@@ -1,0 +1,31 @@
+.headlines {
+    font-size: 44px;
+    font-family: 'KarnakFont','Noto Serif Georgian', serif;
+   font-weight: 900;
+    margin: 0;
+}
+
+.countries-list {
+    display: flex;
+    font-size: 11px;
+    padding: 9px 0px 7px;
+    border-top: 1px solid hsla(0, 0%, 87.46%, 1);
+    border-bottom: 1.6px solid black;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+@font-face {
+    font-family: "KarnakFont";
+    src: url("../../assets/fonts/KARNAKPRO-BLACK.OTF");
+} 
+
+@font-face {
+    font-family: "cheltenham-italic-light";
+    src: url("../../assets/fonts/CHELTENHAMSTDLIGHTITALIC.OTF");
+}
+
+@font-face{
+    font-family: "cheltanham-std-light";
+    src:url("../../assets/fonts/CHELTENHAMSTDLIGHT.OTF")
+}
