@@ -43,6 +43,10 @@ function ArticleDetail() {
                             </figcaption>
                             <div className="article-img-copyright">{worldnews.multimedia[1].copyright}</div>
                         </figure>
+                        <div>
+                          
+
+                        </div>
                     </div>
 
                 </div>
