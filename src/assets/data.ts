@@ -6,13 +6,13 @@ import cooking from "../assets/images/cooking.svg"
 
  
  export let countriesList=[
-   "AFRICA",
-   "AMERICAS",
-    "ASIA",
-    "AUSTRALIA",
-    "CANADA",
-    "EUROPE",
-    "MIDDLE EAST"
+   "Africa",
+   "Americas",
+    "Asias",
+    "Australia",
+    "Canada",
+    "Europe",
+    "Middle East"
  ]
 
   export const footerSections = [

@@ -70,7 +70,7 @@ function Highlights(props: highlightsData) {
                                     <div>
                                         <h3 className="hightlights-title">{props.worldnews.results[2].title}</h3>
                                         <div className="highlights-right-div">
-                                            <img className="headline-3-img" src={props.worldnews.results[2].multimedia[1].url} alt={props.worldnews.results[2].multimedia[0].caption}></img>
+                                            <img className="headline-3-img" src={props.worldnews.results[2].multimedia[0].url} alt={props.worldnews.results[2].multimedia[0].caption}></img>
                                         </div>
                                         <p className="highlight-abstract">{props.worldnews.results[2].abstract}</p>
                                         <p className="time-ago-right-div"><span className="byline-span">{`${getTimeAgo(props.worldnews.results[2].created_date)} . `}</span>
@@ -89,7 +89,7 @@ function Highlights(props: highlightsData) {
                                     <div>
                                         <h3 className="hightlights-title">{props.worldnews.results[3].title}</h3>
                                         <div className="highlights-right-div">
-                                            <img className="headline-3-img" src={props.worldnews.results[3].multimedia[1].url} alt={props.worldnews.results[3].multimedia[0].caption}></img>
+                                            <img className="headline-3-img" src={props.worldnews.results[3].multimedia[2].url} alt={props.worldnews.results[3].multimedia[0].caption}></img>
                                         </div>
                                         <p className="highlight-abstract">{props.worldnews.results[3].abstract}</p>
                                         <p className="time-ago-right-div">

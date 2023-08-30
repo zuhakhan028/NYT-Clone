@@ -41,7 +41,9 @@ export interface EachCountryNewsDataResults{
         title:string;
         url:string;
         multimedia:multiMediaList[];
-        headline:HeadlineData
+        headline:HeadlineData;
+        byline:string;
+        pub_date:string;
      
 
 }

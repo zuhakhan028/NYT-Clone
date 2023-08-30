@@ -6,6 +6,9 @@ import "./articleDetails.css"
 import gift_icon from "../../assets/images/gift.svg"
 import share_icon from "../../assets/images/share.svg"
 import save_icon from "../../assets/images/save.svg"
+import { formatDate } from "../formatDate";
+import { formatDateTime } from "../formatDateandTime";
+import Footer from "../footer/footer";
 function ArticleDetail() {
     const location = useLocation();
     const worldnews = location.state.item;
@@ -36,22 +39,45 @@ function ArticleDetail() {
                     <div className="article-middle-div">
                         <figure className="article-figure">
                             <div>
-                                <img src={worldnews.multimedia[1].url} alt={`${worldnews.multimedia[1].caption}`}></img>
+                                <img className="article-main-img"src={worldnews.multimedia[1].url} alt={`${worldnews.multimedia[1].caption}`}></img>
                             </div>
                             <figcaption className="article-fig-caption">
-                                {worldnews.multimedia[1].caption}
+                                {`${worldnews.multimedia[1].caption} `}
+                                <span className="article-img-copyright">{worldnews.multimedia[1].copyright}</span>
                             </figcaption>
-                            <div className="article-img-copyright">{worldnews.multimedia[1].copyright}</div>
+                         
                         </figure>
-                        <div>
-                          
+                        <p className="article-byline">By <span className="article-byline-span">{`${worldnews.byline.slice(3)}`}</span></p>
+                        <div className="article-formatted-date">
+                            {formatDate(worldnews.created_date)} 
+                             <span className="article-formatted-date-span">{`Updated ${formatDateTime(worldnews.updated_date)}`}</span></div>
+   
+                        <p className="article-paragraph-content">
+                        Sixteen people have died and over 150 have been hospitalized in southeastern Poland in an outbreak of Legionnaires’ disease, a severe strain of bacterial pneumonia, local health authorities said Wednesday.<br></br>
 
+The outbreak has been concentrated in the southeastern city of Rzeszow, which lies about 60 miles from the border with neighboring Ukraine, although some cases have been registered elsewhere. The Polish health ministry said this week that the most likely source of infection was Rzeszow’s municipal water network.<br></br>
+
+Once relatively quiet, Rzeszow has become an important hub for the international response to Russia’s invasion of Ukraine, hosting American soldiers and thousands of Ukrainian refugees. The deaths, which have occurred over the past week, <br></br>sparked unfounded rumors in Poland of Russian responsibility for the outbreak that the authorities have tried to tamp down.<br></br>
+
+Stanislaw Zaryn, a deputy minister who oversees the country’s intelligence services, said Friday that the Polish internal security service was pursuing a routine investigation into the circumstances behind the infection to rule out “potential intentional action in this case.”
+                        </p>
+                       
+                    </div>
+                    <div>
+                    <div className="article-cta-div">
+                        <div className="share-full-article">
+                            <img src={gift_icon} alt={"gift-icon"} className="gift-icon"></img>
+                            <span>Share full article</span>
                         </div>
+                        <div className="article-share-div"> <img src={share_icon} className="article-share-icon" alt={"share-icon"}></img></div>
+                        <div className="article-share-div"> <img src={save_icon} className="article-save-icon" alt={"save-icon"}></img></div>
+
+                    </div>
                     </div>
 
                 </div>
             </section>
-
+<Footer/>
         </div>
     );
 }

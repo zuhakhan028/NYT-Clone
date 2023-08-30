@@ -9,7 +9,7 @@ return(
             countriesList.map((key)=>{
                 return(
                     <li className="country-section" key={key}>
-                           <Link to={`country/${key}`} className="country-link">{key}</Link>
+                           <Link to={`country/${key}`} className="country-link">{key.toUpperCase()}</Link>
                            </li>
                 )
             })

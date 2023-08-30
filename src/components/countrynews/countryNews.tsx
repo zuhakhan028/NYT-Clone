@@ -38,13 +38,13 @@ function CountryNews() {
                 <div className='inner-app-div'>
                     <Header text={countryname.toUpperCase()} />
                     <section className='middle-section-each-country'>
-                        <div className="news-section-dispatches">
+                        <div className="news-section-each-country">
                             WORLD
                         </div>
                         <div className="news-section-dispatches-inner-div">
                             <div>
-                                <h1 className="news-section-h1">
-                                    {countryname.toUpperCase()}
+                                <h1 className="news-section-h1-each-country">
+                                    {countryname}
                                 </h1>
                             </div>
                             <div className="share-outer-div">

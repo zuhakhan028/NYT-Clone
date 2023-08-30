@@ -52,18 +52,18 @@ function EachCountryNews(props: EachCountryNews) {
             {activeSection == "Latest" && <ol className="each-country-ul">
                 {props.data ? <div>
                     <div>
-                        {CountryNewsData.map((value, index) => (
+                        {CountryNewsData.map((item, index) => (
 
                             <li key={index} className={"latest-section-list"}>
                                 <div className="formatted-date">
-                                    {formatDate(value.created_date)
+                                    {formatDate(item.pub_date)
                                     }
                                 </div>
-                                <a href={value.url} className="route-next-page">
+                                <a className="route-next-page">
                                     <article className="article-latest-section-list">
                                         <div className="article-latest-section-inner-div">
-                                            <h3 className="dispatch-title-h3">{value.headline.main}</h3>
-                                            <p className="latest-list-section-abstract">{value.abstract}</p>
+                                            <h3 className="dispatch-title-h3">{item.headline.main}</h3>
+                                            <p className="latest-list-section-abstract">{item.abstract}</p>
                                         </div>
 
 
@@ -71,8 +71,8 @@ function EachCountryNews(props: EachCountryNews) {
                                             <figure className="latest-list-section-figure">
                                                 <div>
                                                     <div>
-                                                        {value?.multimedia?.[0]?.legacy?.xlarge ? (
-                                                            <img src={`https://static01.nyt.com/${value.multimedia[0].legacy.xlarge}`} alt={value.multimedia[0].caption} className="latest-list-section-img" />
+                                                        {item?.multimedia?.[0]?.legacy?.xlarge ? (
+                                                            <img src={`https://static01.nyt.com/${item.multimedia[0].legacy.xlarge}`} alt={item.multimedia[0].caption} className="latest-list-section-img" />
                                                         ) : (
                                                             "Image not available"
                                                         )}
@@ -106,26 +106,26 @@ export default EachCountryNews
 >
 
   <div className="formatted-date">
-    {formatDate(value.created_date)}
+    {formatDate(item.created_date)}
   </div>
-  <a href={value.url} className="route-next-page">
+  <a href={item.url} className="route-next-page">
     <article className="article-latest-section-list">
       <div className="article-latest-section-inner-div">
 
-        <h3 className="dispatch-title-h3">{value.title}</h3>
+        <h3 className="dispatch-title-h3">{item.title}</h3>
 
 
-        <p className="latest-list-section-abstract">{value.abstract}</p>
+        <p className="latest-list-section-abstract">{item.abstract}</p>
       </div>
       <div>
         <figure className="latest-list-section-figure">
           <div>
             <div>
-              {value.multimedia && value.multimedia[0] ? (
+              {item.multimedia && item.multimedia[0] ? (
                 <div>
                   <img
-                    src={value.multimedia[0].url}
-                    alt={value.multimedia[0].caption}
+                    src={item.multimedia[0].url}
+                    alt={item.multimedia[0].caption}
                     className="latest-list-section-img"
                   />
                 </div>

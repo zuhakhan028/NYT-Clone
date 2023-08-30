@@ -35,7 +35,12 @@ function Dispatches(props: Dispatches) {
                 key={index}
                 className={`dispatch-inner-div ${index === 0 ? "first-item" : ""} ${index === slicedResults.length - 1 ? "last-item" : ""}`}
               >
-                    <a className="route-next-page" href={item.url}  key={index}>
+              
+                    <Link className="route-next-page" 
+                     to={`/article/${item.byline}`} // Replace with your desired route path
+                    
+                     state={{ item }}
+                     key={index}>
                 <div className="dispatch-li-inner-div">
                   <figure className="dispatch-figure">
                   <div className="dispatch-img-div">
@@ -48,7 +53,7 @@ function Dispatches(props: Dispatches) {
                   </figure>
                   <p className="dispatch-title">{item.title}</p>
                 </div>
-                </a>
+                </Link>
               </li>
           
 

@@ -53,7 +53,7 @@ function MoreDispatches(props:MoreDispatches){
                         <div className="news-section-dispatches-inner-div">
                             <div>
                             <h1 className="news-section-h1">
-                                {props.text.toUpperCase()}
+                                {props.text}
                             </h1>
                             {props.text=="The Saturday Profile" && <p className="tagline-more-disptches">A weekly profile of the individuals who are shaping the world around them.</p>}
                             </div>
