@@ -20,3 +20,11 @@ margin-top: 45px;
 
 }
 
+@media screen and (max-width:1280px) {
+  .middle-section{
+    width: 95%;
+  }
+  .header-right-section{
+    margin-left: 100px;
+  }
+}

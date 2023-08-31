@@ -104,38 +104,31 @@
 }
 
 
-/* Responsive styles for mobile */
-@media screen and (max-width: 768px) {
-    .header {
-        padding: 0 15px;
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .inner-header-div {
-        padding: 10px 5px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .header-left-section {
-        margin-bottom: 10px;
+@media screen and (max-width:1280px) {
+    .header{
+      margin: 0;
+      padding: 0px 20px;
+      display: flex;
+        
     }
-
-    .header-right-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .header-middle-section {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+    
+   
 }
 
-
-
-
+@media screen and (max-width:1244px) {
+   
+    .header-middle-section{
+        width: 40%;
+    }
+    .header-right-section{
+        margin-left:10%
+    }
+    .inner-header-div{
+        justify-content: space-around;
+        width:100vw;
+    }
+   
+}
 
