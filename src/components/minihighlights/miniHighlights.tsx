@@ -2,8 +2,8 @@ import React from "react";
 import { worldNewsModule, listWorldNews } from "../../assets/module";
 import "./miniHighLights.css";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import place_holder_img from "../../assets/images/placeholder-image.png"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface MiniHighlightsProps {
   worldnews: worldNewsModule | undefined;
