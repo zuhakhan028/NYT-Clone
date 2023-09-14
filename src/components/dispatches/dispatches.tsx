@@ -1,7 +1,12 @@
-import "./dispatches.css"
-import { worldNewsModule } from "../../assets/module";
-import { listWorldNews } from "../../assets/module";
+import "./dispatches.css";
+import { worldNewsModule, listWorldNews } from "../../assets/module";
 import { Link } from "react-router-dom";
+import place_holder_img from "../../assets/images/placeholder-image.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+
+
+
 interface Dispatches {
   worldnews: worldNewsModule | undefined;
   startIndex: number;
@@ -9,7 +14,8 @@ interface Dispatches {
   heading: string;
   anchorText: string;
 }
-function Dispatches(props: Dispatches) {
+
+function Dispatches(props: Dispatches):any {
   let slicedResults: listWorldNews[] = [];
 
   if (props.worldnews) {
@@ -21,45 +27,45 @@ function Dispatches(props: Dispatches) {
       <div className="dispatch-div">
         <header className="dispatch-header">
           <div>
-           
-              {props.heading}
-          
+            {props.heading}
           </div>
-          <Link to={`${props.heading}`}className="more-in-dispatches">{props.anchorText} <small>{">"}</small><span><img></img></span></Link>
+          <Link to={`${props.heading}`} className="more-in-dispatches">
+            {props.anchorText} <small>{">"}</small><span><img alt="" /></span>
+          </Link>
         </header>
         <ol className="dispatch-list">
           {slicedResults.map((item, index) => (
-           
-        
-              <li
+            <li
+              key={index}
+              className={`dispatch-inner-div ${index === 0 ? "first-item" : ""} ${index === slicedResults.length - 1 ? "last-item" : ""}`}
+            >
+              <Link className="route-next-page"
+                to={`/article/${item.byline}`} // Replace with your desired route path
+                state={{ item }}
                 key={index}
-                className={`dispatch-inner-div ${index === 0 ? "first-item" : ""} ${index === slicedResults.length - 1 ? "last-item" : ""}`}
               >
-              
-                    <Link className="route-next-page" 
-                     to={`/article/${item.byline}`} // Replace with your desired route path
-                    
-                     state={{ item }}
-                     key={index}>
                 <div className="dispatch-li-inner-div">
                   <figure className="dispatch-figure">
-                  <div className="dispatch-img-div">
-                      {item.multimedia && item.multimedia.length > 0 && item.multimedia[0] ? (
-                        <img src={item.multimedia[1].url} className="dispatch-img" alt={item.multimedia[0].caption} />
+                    <div className="dispatch-img-div">
+                      {item.multimedia && item.multimedia.length > 1 ? (
+                        <LazyLoadImage
+                        src={item.multimedia[1].url?item.multimedia[1].url:place_holder_img}
+                        className="dispatch-img"
+                        alt={item.multimedia[0].caption}
+                        placeholderSrc={place_holder_img}
+                      
+                      /> 
                       ) : (
-                        <img src={""} className="dispatch-img" alt={item.multimedia[0].caption}/>
+                        <LazyLoadImage src={place_holder_img} className="dispatch-img" alt={item.multimedia ? item.multimedia[0].caption : ""}   placeholderSrc={place_holder_img}/> 
                       )}
                     </div>
                   </figure>
                   <p className="dispatch-title">{item.title}</p>
                 </div>
-                </Link>
-              </li>
-          
-
+              </Link>
+            </li>
           ))}
         </ol>
-
       </div>
     </section>
   );

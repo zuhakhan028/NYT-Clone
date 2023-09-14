@@ -32,10 +32,11 @@ object-fit: contain;
 
 }
 .mini-highlight-title{
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 18px;
     padding: 0 0 5px 0;
+    font-family: "custom-georgia-regular";
   
 }
 .mini-highlight-inner-div{
@@ -61,11 +62,12 @@ object-fit: contain;
 
 .highlight-li-inner-div{
    bottom: 10px;
+   width: 207px;
 }
 
 .mini-highlight-figure{
     float: none;
-    width: 100%;
+    width: 207px;
     margin-left: 0;
     margin-bottom: 8px;
     margin-top: 0;
@@ -79,6 +81,23 @@ object-fit: contain;
 }
 
 
-@media (max-width: 768px) {
-   
+
+@media screen and (max-width:1250px) {
+.mini-highlight-img{
+    width: 182px;
+    height: 120px;
 }
+    
+.mini-highlight-inner-div{
+    padding:0px 15px;
+    width: 192px;
+}
+
+.mini-highlight-div{
+   justify-content: center;
+
+}
+
+
+       
+    }

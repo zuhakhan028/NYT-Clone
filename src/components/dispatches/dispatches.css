@@ -95,3 +95,37 @@
 text-decoration: underline;
 }
 
+@media screen and (max-width:1250px) {
+  
+    
+    .first-item{
+        padding-right: 0;
+    }
+    
+
+    .dispatch-img{
+            width: 182px;
+            height: 120px;
+        }
+            
+        .dispatch-figure{
+            width: 192px;
+        }
+        
+        .mini-highlight-div{
+           justify-content: center;
+        
+        }
+
+        .dispatch-inner-div {
+            width: 192px;
+            padding: 0 15px 0 15px;
+            border-right: 1px solid var(--color-stroke-quaternary);
+        }
+        
+        
+               
+      
+    
+           
+        }

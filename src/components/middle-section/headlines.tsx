@@ -19,7 +19,7 @@ function HeadLines(){
         .then(result => setWorldNewsResult(result))
         .catch(error => console.log('error', error));
       },[])
-      
+ console.log(worldNewsResult)     
     return(
         <>
             <h1 className="headlines">World News</h1>
@@ -34,7 +34,7 @@ function HeadLines(){
             <Highlights worldnews={worldNewsResult}/>
             <MiniHighlights worldnews={worldNewsResult} startIndex={4} endIndex={8}/>
             <MiniHighlights worldnews={worldNewsResult} startIndex={9} endIndex={13}/>
-            <Dispatches worldnews={worldNewsResult} startIndex={14} endIndex={18} heading={"Dispatch"} anchorText={"More in Dispatches"}/>
+            <Dispatches worldnews={worldNewsResult} startIndex={14} endIndex={18} heading={"Dispatches"} anchorText={"More in Dispatches"}/>
             <Dispatches worldnews={worldNewsResult} startIndex={19} endIndex={23} heading={"The Saturday Profile"} anchorText={"More in The Saturday Profile"}/>
             <LatestSections worldnews={worldNewsResult}/>
             

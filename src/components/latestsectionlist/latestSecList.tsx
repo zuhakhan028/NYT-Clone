@@ -3,6 +3,8 @@ import "./latestSectionList.css";
 import { worldNewsModule } from "../../assets/module";
 import { formatDate } from "../formatDate";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import place_holder_img from "../../assets/images/placeholder-image.png"
 interface LatestSectionListProps {
   index: number;
   worldnews: worldNewsModule | undefined;
@@ -56,17 +58,19 @@ function LatestSectionList(props: LatestSectionListProps) {
                                 <div>
                                   {item.multimedia && item.multimedia[1] ? (
                                     <div>
-                                      <img
+                                      <LazyLoadImage
                                         src={item.multimedia[1].url}
                                         alt={item.multimedia[1].caption}
                                         className="latest-list-section-img"
+                                        placeholderSrc={place_holder_img}
                                       />
                                     </div>
                                   ) : (
-                                    <img
+                                    <LazyLoadImage
                                       src={""}
-                                      alt={""}
+                                      alt={"img-not-avalaible"}
                                       className="latest-list-section-img"
+                                      placeholderSrc={place_holder_img}
                                     />
                                   )}
                                 </div>
