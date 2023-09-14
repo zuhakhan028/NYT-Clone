@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.411120bf.css",
+    "main.js": "/static/js/main.676396ac.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/GEORGIA.TTF": "/static/media/GEORGIA.fdad852e4d92e9181774.TTF",
+    "static/media/KARNAKPRO-BLACK.OTF": "/static/media/KARNAKPRO-BLACK.452f8271c69f2d00141d.OTF",
+    "static/media/CHELTENHAMSTDLIGHTITALIC.OTF": "/static/media/CHELTENHAMSTDLIGHTITALIC.8ecc9c44531092756d14.OTF",
+    "static/media/CHELTENHAMSTDLIGHT.OTF": "/static/media/CHELTENHAMSTDLIGHT.6b3f58a7f75c2e4eeba7.OTF",
+    "static/media/auth-1.png": "/static/media/auth-1.22529b496faa461bd557.png",
+    "static/media/nytimes-wordmark.svg": "/static/media/nytimes-wordmark.6909566bfc4b5e13028d32fb6041841b.svg",
+    "static/media/gamess.svg": "/static/media/gamess.7ec9ca59dc7bae5f67c8bf9e36f9aa33.svg",
+    "index.html": "/index.html",
+    "static/media/gift.svg": "/static/media/gift.009eb608d617e1cc2affa45c99842e03.svg",
+    "static/media/favicon.svg": "/static/media/favicon.a7249383519370c5c488da9a8076abc2.svg",
+    "static/media/cooking.svg": "/static/media/cooking.e72ec28065cd7f06d9fd3a6aec9a7b8d.svg",
+    "static/media/share.svg": "/static/media/share.4e36ad7fccc9ebb0e8eb4ff78f2c77a4.svg",
+    "static/media/homedelivery.svg": "/static/media/homedelivery.46bafbca4a22fdd38d1e6d2f65d34d3a.svg",
+    "static/media/searchicon.svg": "/static/media/searchicon.40804b709a8a1d3f916e1c46fa03c147.svg",
+    "static/media/hamburger.svg": "/static/media/hamburger.b3bebf44002c683a08a8a720f54e2f47.svg",
+    "static/media/save.svg": "/static/media/save.62e3c8e0e494611ab97e4c63d4daa5ee.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.c729649ef89653fd4c96444411ed18e7.svg",
+    "main.411120bf.css.map": "/static/css/main.411120bf.css.map",
+    "main.676396ac.js.map": "/static/js/main.676396ac.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.411120bf.css",
+    "static/js/main.676396ac.js"
+  ]
+}
