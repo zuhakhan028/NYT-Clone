@@ -15,8 +15,6 @@ function ArticleDetail() {
     const location = useLocation();
     const worldnews = location.state.item;
 
-    // Now you can access the worldnews data passed from the MiniHighlights component
-    // and display the details of the selected article
     document.title = worldnews.title
     console.log(worldnews)
 
@@ -34,7 +32,7 @@ function ArticleDetail() {
                 <div className="article-top-div">
                     <div className="article-cta-div">
                         <div className="share-full-article">
-                            <img src={gift_icon} alt={"gift-icon"} className="gift-icon"></img>
+                            <img src={gift_icon} alt={"gift-icon"} className="gift-icon" ></img>
                             <span>Share full article</span>
                         </div>
                         <div className="article-share-div"> <img src={share_icon} className="article-share-icon" alt={"share-icon"}></img></div>

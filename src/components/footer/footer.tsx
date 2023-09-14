@@ -21,7 +21,7 @@ function Footer() {
                             <ul className="footer-subcategories">
                                 {section.subcategories.map((subcategory, subIndex) => (
                                     <li key={subIndex} className="footer-subcategory">
-                                        <a href="#" className="footer-subcategory-link">
+                                        <a href="" className="footer-subcategory-link">
                                             {subcategory}
                                         </a>
                                     </li>
@@ -38,7 +38,7 @@ function Footer() {
                                         footerLinksSection1[0].subcatogeries.map((sections, index) => {
                                             return (
                                                 <li key={index} className="footer-subcategory-right-div">
-                                                    <a className="footer-subcategory-link-right-div">
+                                                    <a href="" className="footer-subcategory-link-right-div">
                                                         <img src={sections.imagePath} className="footer-icons" alt={sections.text}></img>
                                                         <span>{sections.text}</span>
                                                     </a>

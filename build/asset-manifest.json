@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.411120bf.css",
-    "main.js": "/static/js/main.676396ac.js",
+    "main.js": "/static/js/main.4bf458a1.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/GEORGIA.TTF": "/static/media/GEORGIA.fdad852e4d92e9181774.TTF",
     "static/media/KARNAKPRO-BLACK.OTF": "/static/media/KARNAKPRO-BLACK.452f8271c69f2d00141d.OTF",
@@ -21,11 +21,11 @@
     "static/media/save.svg": "/static/media/save.62e3c8e0e494611ab97e4c63d4daa5ee.svg",
     "static/media/dropdown.svg": "/static/media/dropdown.c729649ef89653fd4c96444411ed18e7.svg",
     "main.411120bf.css.map": "/static/css/main.411120bf.css.map",
-    "main.676396ac.js.map": "/static/js/main.676396ac.js.map",
+    "main.4bf458a1.js.map": "/static/js/main.4bf458a1.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.411120bf.css",
-    "static/js/main.676396ac.js"
+    "static/js/main.4bf458a1.js"
   ]
 }

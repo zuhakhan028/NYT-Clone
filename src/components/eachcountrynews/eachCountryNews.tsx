@@ -49,7 +49,7 @@ function EachCountryNews(props: eachCountryNews) {
                 </ul>
             </nav>
 
-            {activeSection == "Latest" && <ol className="each-country-ul">
+            {activeSection === "Latest" && <ol className="each-country-ul">
                 {props.data ? <div>
                     <div>
                         {CountryNewsData.map((item, index) => (
@@ -90,7 +90,7 @@ function EachCountryNews(props: eachCountryNews) {
 
                 </div> : <div></div>}
             </ol>}
-            {activeSection == "Search" && <div>search</div>}
+            {activeSection === "Search" && <div>search</div>}
 
         </section>
 
@@ -102,47 +102,3 @@ export default EachCountryNews
 
 
 
-{/* <li key={index} className={` ${isLastItem ? "last-list-item" : "latest-section-list"}`}
->
-
-  <div className="formatted-date">
-    {formatDate(item.created_date)}
-  </div>
-  <a href={item.url} className="route-next-page">
-    <article className="article-latest-section-list">
-      <div className="article-latest-section-inner-div">
-
-        <h3 className="dispatch-title-h3">{item.title}</h3>
-
-
-        <p className="latest-list-section-abstract">{item.abstract}</p>
-      </div>
-      <div>
-        <figure className="latest-list-section-figure">
-          <div>
-            <div>
-              {item.multimedia && item.multimedia[0] ? (
-                <div>
-                  <img
-                    src={item.multimedia[0].url}
-                    alt={item.multimedia[0].caption}
-                    className="latest-list-section-img"
-                  />
-                </div>
-              ) : (
-                <img
-                  src={""}
-                  alt={""}
-                  className="latest-list-section-img"
-                />
-              )}
-            </div>
-          </div>
-        </figure>
-      </div>
-    </article>
-  </a>
-
-
-
-</li> */}

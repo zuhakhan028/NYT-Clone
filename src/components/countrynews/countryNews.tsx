@@ -1,17 +1,14 @@
-// interface CountryNews{
-//     countryName:string
+
 import "./countryNews.css"
 import { EachCountryNewsData } from "../../assets/module";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { EachCountryNewsDataResults } from "../../assets/module";
 
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import search_icon from "../../assets/images/searchicon.svg"
 import EachCountryNews from "../eachcountrynews/eachCountryNews";
-// }
-// ... (imports)
+
 
 function CountryNews() {
     const { countryname }: any = useParams();
