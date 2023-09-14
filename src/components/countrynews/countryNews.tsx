@@ -5,7 +5,7 @@ import { EachCountryNewsData } from "../../assets/module";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { EachCountryNewsDataResults } from "../../assets/module";
-import LatestSections from "../latestsections/latestSections";
+
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import search_icon from "../../assets/images/searchicon.svg"
@@ -31,7 +31,7 @@ function CountryNews() {
     }, []);
 
     if (eachCountryNews) {
-        const CountryNewsData: EachCountryNewsDataResults[] = eachCountryNews?.response?.docs || [];
+    
 
         return (
             <div className="more-dispatches">
@@ -66,15 +66,3 @@ function CountryNews() {
 
 export default CountryNews;
 
-//   <div>
-//   {data.map((value, index) => (
-//     <div key={index}>
-//       {value.abstract}
-//       {value.multimedia?.[0]?.legacy?.xlarge ? (
-//         <img src={`https://static01.nyt.com/${value.multimedia[0].legacy.xlarge}`} alt="Image" />
-//       ) : (
-//         "Image not available"
-//       )}
-//     </div>
-//   ))}
-// </div>

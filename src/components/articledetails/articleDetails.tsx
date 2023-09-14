@@ -10,7 +10,6 @@ import { formatDate } from "../formatDate";
 import { formatDateTime } from "../formatDateandTime";
 import Footer from "../footer/footer";
 import auth_1 from "../../assets/images/auth-1.png"
-import auth_2 from "../../assets/images/auth-2.png"
 import CommentsButton from "../commentsbutton/commentsButton";
 function ArticleDetail() {
     const location = useLocation();

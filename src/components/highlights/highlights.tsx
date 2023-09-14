@@ -1,9 +1,9 @@
 import React from "react";
 import { worldNewsModule } from "../../assets/module";
 import "./hightlights.css"
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { getTimeAgo } from "../getTimeAgo";
 import { formatNames } from "../formatNames";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import place_holder_img from "../../assets/images/placeholder-image.png"
 

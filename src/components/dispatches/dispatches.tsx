@@ -7,7 +7,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 
-interface Dispatches {
+interface dispatches {
   worldnews: worldNewsModule | undefined;
   startIndex: number;
   endIndex: number;
@@ -15,7 +15,7 @@ interface Dispatches {
   anchorText: string;
 }
 
-function Dispatches(props: Dispatches):any {
+function Dispatches(props: dispatches):any {
   let slicedResults: listWorldNews[] = [];
 
   if (props.worldnews) {

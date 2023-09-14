@@ -7,10 +7,10 @@ import { EachCountryNewsDataResults } from "../../assets/module";
 import { formatDate } from "../formatDate";
 
 
-interface EachCountryNews {
+interface eachCountryNews {
     data: EachCountryNewsData | undefined
 }
-function EachCountryNews(props: EachCountryNews) {
+function EachCountryNews(props: eachCountryNews) {
     const [activeSection, setActiveSection] = useState<string>("Latest");
 
     const handleSectionClick = (section: string) => {
