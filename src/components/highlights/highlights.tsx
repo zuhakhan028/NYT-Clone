@@ -1,10 +1,10 @@
 import React from "react";
 import { worldNewsModule } from "../../assets/module";
 import "./hightlights.css"
-import { multiMediaList } from "../../assets/module";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { getTimeAgo } from "../getTimeAgo";
 import { formatNames } from "../formatNames";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import place_holder_img from "../../assets/images/placeholder-image.png"
 
 interface highlightsData {
@@ -126,11 +126,3 @@ function Highlights(props: highlightsData) {
 
 export default Highlights
 
-
-{/* <div>{props.worldnews.results.map((eachArticle,index)=>{
-    return(
-        <div key={index}>{eachArticle.title}</div>
-    )
-})
-}
-</div> */}

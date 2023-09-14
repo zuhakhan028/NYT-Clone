@@ -4,6 +4,7 @@ import { worldNewsModule } from "../../assets/module";
 import { formatDate } from "../formatDate";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import place_holder_img from "../../assets/images/placeholder-image.png"
 interface LatestSectionListProps {
   index: number;
