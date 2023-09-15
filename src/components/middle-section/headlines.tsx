@@ -19,7 +19,7 @@ function HeadLines(){
         .then(result => setWorldNewsResult(result))
         .catch(error => console.log('error', error));
       },[])
- console.log(worldNewsResult)     
+   
     return(
         <>
             <h1 className="headlines">World News</h1>

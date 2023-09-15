@@ -26,14 +26,26 @@
 }
 
 @font-face{
-    font-family: "cheltanham-std-light";
-    src:url("../../assets/fonts/CHELTENHAMSTDLIGHT.OTF")
+    font-family: "cheltanham-std";
+    src:url("../../assets/fonts/CHELTENHAMSTDBOOK.OTF")
 }
+
+@font-face{
+    font-family: "cheltanham-italic";
+    src:url("../../assets/fonts/CHELTENHAMSTDLIGHTITALIC.OTF")
+}
+
 
 @font-face {
     font-family: "custom-georgia-regular";
     src: url("../../assets/fonts/GEORGIA.TTF");
 }
+
+@font-face {
+    font-family: "custom-times-new-roman-regular";
+    src: url("../../assets/fonts/TIMES.TTF");
+}
+
 
 @media screen and (max-width:1244px) {
    

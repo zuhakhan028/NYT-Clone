@@ -28,7 +28,7 @@ function MiniHighlights(props: MiniHighlightsProps) {
               className={`mini-highlight-inner-div ${index === 0 ? "first-item" : ""} ${index === slicedResults.length - 1 ? "last-item" : ""}`}
             >
               <Link
-                to={`/article/${item.byline}`} // Replace with your desired route path
+                to={`/article/${item.byline}`}
                 className="route-next-page"
                 state={{ item }}
               >
