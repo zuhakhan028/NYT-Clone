@@ -49,7 +49,9 @@ function Highlights(props: highlightsData) {
 
 
                         <li className="headline-2-li">
-                            <a href={props.worldnews.results[1].url} className="route-next-page">
+                            < Link to={`/article/${props.worldnews.results[2].byline}`}
+                                className="route-next-page"
+                                state={props.worldnews.results[2]}>
                                 <article className="highlight-article">
                                     <figure className="fig-div">
                                         <div>
@@ -65,7 +67,7 @@ function Highlights(props: highlightsData) {
                                         <p className="time-ago">{`${getTimeAgo(props.worldnews.results[2].created_date)} . `}<span className="byline-span-author">{formatNames(props.worldnews.results[1].byline)}</span></p>
                                     </div>
                                 </article>
-                            </a>
+                            </Link>
                         </li>
 
 
@@ -73,7 +75,9 @@ function Highlights(props: highlightsData) {
                         <li className="headline-3-li">
 
                             <div className="highlight-right-top-div">
-                                <a href={props.worldnews.results[3].url} className="route-next-page">
+                                <Link to={`/article/${props.worldnews.results[3].byline}`}
+                                className="route-next-page"
+                                state={props.worldnews.results[3]}>
                                     <article className="highlight-article">
                                         <div>
                                             <h3 className="hightlights-title">{props.worldnews.results[3].title}</h3>
@@ -86,13 +90,15 @@ function Highlights(props: highlightsData) {
                                             </p>
                                         </div>
                                     </article>
-                                </a>
+                                </Link>
                             </div>
 
 
 
                             <div className="highlight-right-bottom-div">
-                                <a href={props.worldnews.results[4].url} className="route-next-page">
+                                <Link to={`/article/${props.worldnews.results[4].byline}`}
+                                className="route-next-page"
+                                state={props.worldnews.results[4]}>
                                     <article className="highlight-article">
                                         <div>
                                             <h3 className="hightlights-title">{props.worldnews.results[4].title}</h3>
@@ -106,7 +112,7 @@ function Highlights(props: highlightsData) {
                                             </p>
                                         </div>
                                     </article>
-                                </a>
+                                </Link>
                             </div>
 
 

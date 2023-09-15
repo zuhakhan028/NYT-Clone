@@ -26,9 +26,7 @@ import { EachCountryNewsData } from "../../assets/module";
 function ArticleDetail() {
     window.scrollTo(0, 0);
     const location = useLocation();
-  
-    const worldnews = location.state;
-
+    const worldnews = location.state ? (location.state.item ? location.state.item : location.state) : null;
     document.title = worldnews.title
 
 
@@ -111,7 +109,7 @@ function ArticleDetail() {
                     </div>
                 </div>
                 <div className="each-article-bottom-div">
-                   
+                    
                 </div>
 
 
