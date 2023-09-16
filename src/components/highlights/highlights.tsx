@@ -128,7 +128,7 @@ function Highlights(props: highlightsData) {
     } else {
         return (
             <div className="loading-div-page">
-                We are Loading Most releveant news for you.. please wait.
+                We are Loading Most releveant news for you in a moment.
             </div>
         )
     }

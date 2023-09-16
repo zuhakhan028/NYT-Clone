@@ -17,3 +17,12 @@
     padding-top: 8px;
     margin-top: 15px;
 }
+.loading-country-news-div{
+    font-size: 26px;
+    font-weight: 600;
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

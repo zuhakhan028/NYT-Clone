@@ -57,7 +57,7 @@ function CountryNews() {
 
         );
     } else {
-        return <div>Loading...</div>;
+        return <div className="loading-country-news-div">{`Loading News for ${countryname}...`}</div>;
     }
 }
 
