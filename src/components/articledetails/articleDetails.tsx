@@ -24,32 +24,18 @@ import { EachCountryNewsData } from "../../assets/module";
 
 
 function ArticleDetail() {
-    window.scrollTo(0, 0);
-  
+    window.scrollTo(0, 0); 
     const location = useLocation();
-    const worldnews = location.state ? (location.state.item ? location.state.item : location.state) : null;
-    
+    const worldnews = location.state ? (location.state.item ? location.state.item : location.state) : null;    
     document.title = worldnews.title
+   
+const metaDescription = document.querySelector('meta[name="news"]');
 
 
-    const [eachCountryNews, setEachCountryNews] = useState<EachCountryNewsData | null>(null);
-
-    useEffect(() => {
-        let eachCountryName = worldnews.subsection.toLowerCase();
-        var requestOptions: any = {
-            method: 'GET',
-            redirect: 'follow'
-        };
-
-        fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=\"${eachCountryName}\"&api-key=oj5apZ1t8GGl3mvFF2mfYtddMrB9BAsM`, requestOptions)
-            .then(response => response.json())
-            .then(result => setEachCountryNews(result))
-            .catch(error => console.log('error', error));
-    }, []);
-
-
-
-
+if (metaDescription) {
+  metaDescription.setAttribute("content", worldnews.title);
+}
+    
 
     return (
         <div className="each-article-main-div">

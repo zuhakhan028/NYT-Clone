@@ -34,7 +34,6 @@ function LatestSectionList(props: LatestSectionListProps) {
                 if (item.title) {
                   const isLastItem = index === numResults - 1;
                   return (
-
                     <li key={index} className={` ${isLastItem ? "last-list-item" : "latest-section-list"}`}
                     >
 
@@ -43,16 +42,12 @@ function LatestSectionList(props: LatestSectionListProps) {
                       </div>
                       <Link
                       to={`/article/${item.byline}`} 
-                    
                       state={{ item }}
                       key={index}
                       className="route-next-page">
                         <article className="article-latest-section-list">
                           <div className="article-latest-section-inner-div">
-
                             <h3 className="dispatch-title-h3">{item.title}</h3>
-
-
                             <p className="latest-list-section-abstract">{item.abstract}</p>
                           </div>
                           <div>
@@ -70,10 +65,10 @@ function LatestSectionList(props: LatestSectionListProps) {
                                     </div>
                                   ) : (
                                     <LazyLoadImage
-                                      src={""}
+                                      src={place_holder_img}
                                       alt={"img-not-avalaible"}
                                       className="latest-list-section-img"
-                                      placeholderSrc={place_holder_img}
+                                    
                                     />
                                   )}
                                 </div>
@@ -82,12 +77,7 @@ function LatestSectionList(props: LatestSectionListProps) {
                           </div>
                         </article>
                       </Link>
-
-
-
                     </li>
-
-
                   );
                 } else {
                   return null; 
@@ -154,10 +144,10 @@ function LatestSectionList(props: LatestSectionListProps) {
                                     </div>
                                   ) : (
                                     <LazyLoadImage
-                                      src={""}
-                                      alt={"img-not-avalaible"}
+                                    src={place_holder_img}
+                                      alt="img-not-avalaible"
                                       className="latest-list-section-img"
-                                      placeholderSrc={place_holder_img}
+                                   
                                     />
                                   )}
                                 </div>
@@ -166,12 +156,7 @@ function LatestSectionList(props: LatestSectionListProps) {
                           </div>
                         </article>
                       </Link>
-
-
-
                     </li>
-
-
                   );
                 } else {
                   return null; 
@@ -182,7 +167,7 @@ function LatestSectionList(props: LatestSectionListProps) {
         </section>
       );
     } else {
-      return <div>Loading</div>;
+      return <div className="latest-news-loading-div">Loading Latest News for you</div>;
     }
   }
 }
