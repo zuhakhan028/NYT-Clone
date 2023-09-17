@@ -48,7 +48,6 @@ function ArticleDetail() {
     }, []);
 
 
-    console.log(eachCountryNews)
 
 
 
@@ -85,14 +84,14 @@ function ArticleDetail() {
                                 </figcaption>
 
                             </figure>
-                            <p className="article-byline"> <img src={auth_1} className="auth-img"></img>By <span className="article-byline-span">{`${worldnews.byline.slice(3)}`}</span></p>
+                            <div className="article-byline"> <img src={auth_1} className="auth-img"></img>By<span className="article-byline-span">{` ${ worldnews.byline.slice(3)}`}</span></div>
                             <div className="article-formatted-date">
                                 {formatDate(worldnews.created_date)}
                                 <span className="article-formatted-date-span">{`Updated ${formatDateTime(worldnews.updated_date)}`}</span></div>
 
-                            <p className="article-paragraph-content">
+                            <div className="article-paragraph-content">
                                 {splitStringIntoParagraphs(articleBody, worldnews.multimedia[1].url)}
-                            </p>
+                            </div>
 
                         </div>
                         <CommentsButton />

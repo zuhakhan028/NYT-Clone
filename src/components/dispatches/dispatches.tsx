@@ -40,7 +40,7 @@ function Dispatches(props: dispatches):any {
               className={`dispatch-inner-div ${index === 0 ? "first-item" : ""} ${index === slicedResults.length - 1 ? "last-item" : ""}`}
             >
               <Link className="route-next-page"
-                to={`/article/${item.byline}`} // Replace with your desired route path
+                to={`/article/${item.byline}`}
                 state={{ item }}
                 key={index}
               >

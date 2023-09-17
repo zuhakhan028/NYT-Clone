@@ -87,3 +87,17 @@ text-decoration: underline;
    
 
 }
+
+
+.results-fetched-div{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.select-search-div{
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    outline: none;
+}
+

@@ -10,6 +10,7 @@
     z-index: 100;
     border-top-right-radius: 10px;
     padding: 10px;
+    overflow: scroll;
   }
   
   .sidebar.open {
@@ -52,6 +53,7 @@
   .each-menu-section-li:hover{
     background-color:#e0ebf4;
     padding-left: 5px;
+    cursor: pointer;
 
   }
 

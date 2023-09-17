@@ -131,6 +131,7 @@
     text-decoration: underline;
     font-size: 15px;
   font-weight: 700;
+  margin-left: 3px;
 }
 
 .article-formatted-date{
