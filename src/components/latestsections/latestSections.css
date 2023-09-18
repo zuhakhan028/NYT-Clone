@@ -89,3 +89,11 @@ border-bottom:2px solid var(--color-stroke-quaternary,#DFDFDF) ;
     margin-right: 7px;
     opacity: 0.40;
 }
+
+
+@media screen and (max-width:1000px) {
+    .latest-section-ul{
+        width: 90vw;
+        /* padding-left: 180px; */
+    }
+}

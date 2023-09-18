@@ -94,17 +94,19 @@ if (metaDescription) {
                         </div>
 
                     </div>
+                  
                 </div>
                 <div className="each-article-bottom-div">
-                    
+                <Footer /> 
                 </div>
 
-
+            
             </section>
 
 
+ 
 
-            <Footer />
+                
         </div>
     );
 }

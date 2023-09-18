@@ -26,3 +26,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen  and (max-width:1000px){
+    .middle-section-each-country{
+        width: 900px;
+    }
+}

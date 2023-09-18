@@ -83,9 +83,11 @@ function CountryArticle() {
             </div>
           </div>
         </div>
-        <div className="each-article-bottom-div"></div>
+        <div className="each-article-bottom-div">
+        <Footer />
+        </div>
       </section>
-      <Footer />
+   
     </div>
   );
 }

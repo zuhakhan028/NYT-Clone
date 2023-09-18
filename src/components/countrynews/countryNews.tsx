@@ -49,10 +49,12 @@ function CountryNews() {
                             </div>
                         </div>
                         <EachCountryNews data={eachCountryNews}/>
+                        <Footer />
                     </section>
                
-                    <Footer />
+                
                 </div>
+               
             </div>
 
         );

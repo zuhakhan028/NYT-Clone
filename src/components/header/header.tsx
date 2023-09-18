@@ -5,6 +5,7 @@ import logo from "../../assets/images/nytimes-wordmark.svg";
 import search_icon from "../../assets/images/searchicon.svg";
 import drop_down_icon from "../../assets/images/dropdown.svg";
 import SideBar from "../sidebar/sideBar";
+import profile_icon from "../../assets/images/profile.svg"
 
 interface HeaderProps {
   text: string;
@@ -54,7 +55,9 @@ function Header(props: HeaderProps) {
             <div className="account-div">
               Account
               <img className="drop_down_icon" src={drop_down_icon} alt="drop_down" />
+            
             </div>
+            <img src={profile_icon} className="profile-icon-img"></img>
           </div>
         </div>
       </div>

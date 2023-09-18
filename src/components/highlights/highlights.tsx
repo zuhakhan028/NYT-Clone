@@ -22,6 +22,7 @@ function Highlights(props: highlightsData) {
 
                 <div>
                     <ol className="top-highlights-list">
+                        <div className="collection-highlight-container-inner-div">
 
                         <li className="headline-1-li">
                             <Link to={`/article/${props.worldnews.results[1].byline}`}
@@ -70,7 +71,7 @@ function Highlights(props: highlightsData) {
                             </Link>
                         </li>
 
-
+                        </div>
 
                         <li className="headline-3-li">
 

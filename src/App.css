@@ -28,3 +28,9 @@ margin-top: 45px;
     margin-left: 100px;
   }
 }
+
+@media screen and (max-width:1000px){
+.App{
+  overflow-y: hidden;
+}
+}

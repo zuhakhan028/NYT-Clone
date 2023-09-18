@@ -96,6 +96,12 @@
     color: rgba(18, 18, 18, 0.65);
 }
 
+.profile-icon-img{
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
 .drop_down_icon {
     width: 9px;
     height: 5px;
@@ -151,3 +157,58 @@
    
 }
 
+@media screen and (max-width:1000px){
+    .header{
+        width: 97vw;
+    }
+   
+    .search-icon {
+        display: none;
+    } 
+
+    .subscription-button{
+        display: none;
+    }
+
+    .news-section{
+        display: none;
+    }
+   
+
+    .inner-header-div {
+       display: flex;
+       width: 96vw;
+       justify-content: left;
+       padding: 20px;
+       
+    }
+
+    .header-left-section{
+        margin-right: 30%;
+    }
+    .logo-icon {
+        width: 225px;
+        height: 30px;
+        margin-top: 8px;
+     
+      
+    }
+    .profile-icon-img{
+       width: 24px;
+       height: 24px;
+       display: inline-block;
+       margin-top: 10px;
+       cursor: pointer;
+   
+       
+    }
+
+    .account-div{
+        display: none;
+    }
+   
+    .header-middle-section{
+        margin-right: 250px;
+    }
+    
+}
