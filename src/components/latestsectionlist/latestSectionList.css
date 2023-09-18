@@ -78,10 +78,11 @@ text-decoration: underline;
     font-size: 17px;
     margin-top: 5px;
     font-family: 'EB Garamond', serif;
+    margin-bottom: 11px;
 }
 
 .dispatch-title-h3{
-    font-family: "custom-times-new-roman-regular";
+    font-family: "cheltanham-std";
     font-size: 23px;
     font-weight: 400;
    
@@ -109,5 +110,9 @@ text-decoration: underline;
     color: black;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }

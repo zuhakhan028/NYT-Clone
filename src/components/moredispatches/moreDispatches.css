@@ -53,3 +53,10 @@
 
 }
 
+.more-dispatches-loading-page{
+    width: 98vw;
+    height: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

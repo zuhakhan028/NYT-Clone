@@ -51,6 +51,7 @@ function Header(props: HeaderProps) {
           <div className="header-right-section">
             <div className="subscription-button">
               SUBSCRIBE FOR &#8377;600/YEAR
+            
             </div>
             <div className="account-div">
               Account

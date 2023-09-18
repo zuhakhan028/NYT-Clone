@@ -28,6 +28,7 @@
 .headline-1-img {
     width: 606px;
     height: 400px;
+    object-fit: contain;
     
 }
 
@@ -48,8 +49,9 @@
 }
 
 .hightlights-title {
-    font-family: 'Noto Serif Georgian', serif;
+    font-family: "cheltanham-std", serif;
     font-weight: 700;
+    font-size: 23px;
 
 }
 
@@ -89,15 +91,16 @@
     width: 75px;
     height: 75px;
     margin-top: 19px;
-    object-fit: fill;
     margin-bottom: 5px;
     padding-left: 15px;
+    object-fit:cover;
 }
 .highlights-right-div{
     clear: right;
     display: block;
     float: right;
     margin-right: 0;
+
 }
 
 .time-ago{
@@ -113,6 +116,8 @@
     color:var(--color-content-quaternary,#727272);
     white-space: nowrap;
    
+
+   
    
 }
 
@@ -121,6 +126,7 @@
     font-size: 11px;
     color:var(--color-content-quaternary,#727272);
    text-align: left;
+   margin-left: 5px;
 
    
    
@@ -129,11 +135,11 @@
 .loading-div-page{
 position: relative;
 width: 100%;
-height: 600px;
+height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     
 }
 

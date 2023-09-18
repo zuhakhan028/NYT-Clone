@@ -46,19 +46,6 @@ object-fit: contain;
    
 }
 
-.first-item{
-    width: 200px;
-    align-items: left; 
-    padding-left: 0;
-    padding-right: 27px;
-}
-
-.last-item{
-    width: 200px;
-    padding-right: 0;
-    border-right: none;
-  
-}
 
 .highlight-li-inner-div{
    bottom: 10px;

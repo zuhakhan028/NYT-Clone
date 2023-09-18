@@ -49,7 +49,7 @@ return(
                         }`}
                     onClick={() => handleSectionClick("Search")}
                 >
-                    <span className="search-icon"><img src={search_icon} alt={"search-icon"}></img></span> Search
+                    <span className="search-icon-latest-section"><img src={search_icon} alt={"search-icon"}></img></span> Search
                 </a>
             </li>
         </ul>

@@ -22,7 +22,7 @@ function MoreDispatches(props:MoreDispatches){
     };
     useEffect(() => {
         let url;
-    
+        window.scroll(0,0)
         if (props.text === "Dispatches" || props.text === "The Saturday Profile") {
             url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=oj5apZ1t8GGl3mvFF2mfYtddMrB9BAsM";
         } else {
@@ -73,8 +73,8 @@ function MoreDispatches(props:MoreDispatches){
         )
         }else{
             return(
-                <div>
-                    ok
+                <div className="more-dispatches-loading-page">
+                   {` Getting you the Most Relevant ${props.text}`}
                 </div>
             )
     }

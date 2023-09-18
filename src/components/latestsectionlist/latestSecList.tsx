@@ -4,7 +4,7 @@ import { worldNewsModule } from "../../assets/module";
 import { formatDate } from "../formatDate";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { formatNames } from "../formatNames";
 import place_holder_img from "../../assets/images/placeholder-image.png"
 interface LatestSectionListProps {
   index: number;
@@ -16,6 +16,7 @@ function LatestSectionList(props: LatestSectionListProps) {
 
   if (props.index === 1) {
     if(props.worldnews){
+      console.log(props.worldnews)
       const numResults = props.worldnews.num_results;
       console.log(numResults)
       return (
@@ -128,6 +129,7 @@ function LatestSectionList(props: LatestSectionListProps) {
 
 
                             <p className="latest-list-section-abstract">{item.abstract}</p>
+                            <div className="byline-span-author">{formatNames(item.byline)}</div>
                           </div>
                           <div>
                             <figure className="latest-list-section-figure">

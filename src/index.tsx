@@ -8,6 +8,7 @@ import CountryArticle from './components/countryarticle/countryArticle';
 import MoreDispatches from './components/moredispatches/moreDispatches';
 import CountryNews from './components/countrynews/countryNews';
 import ArticleDetail from './components/articledetails/articleDetails';
+
 const router=createBrowserRouter(
 [
   {path:"/",
@@ -31,6 +32,8 @@ element:<CountryNews/>
     element: <CountryArticle/>
   }
 ])
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

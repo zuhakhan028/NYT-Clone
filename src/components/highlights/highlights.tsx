@@ -41,7 +41,7 @@ function Highlights(props: highlightsData) {
                                     <div>
                                         <h3 className="hightlights-title">{props.worldnews.results[1].title}</h3>
                                         <p className="highlight-abstract">{props.worldnews.results[1].abstract}</p>
-                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[1].created_date)} .`}<span className="byline-span-author">{formatNames(props.worldnews.results[0].byline)}</span></p>
+                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[1].created_date)} .`}<span className="byline-span-author">{formatNames(props.worldnews.results[0].byline)?formatNames(props.worldnews.results[0].byline):"By NEW YORK TIMES"}</span></p>
                                     </div>
                                 </article>
                             </Link>
@@ -65,7 +65,7 @@ function Highlights(props: highlightsData) {
                                     <div>
                                         <h3 className="hightlights-title">{props.worldnews.results[2].title}</h3>
                                         <p className="highlight-abstract">{props.worldnews.results[2].abstract}</p>
-                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[2].created_date)} . `}<span className="byline-span-author">{formatNames(props.worldnews.results[1].byline)}</span></p>
+                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[2].created_date)} .`}<span className="byline-span-author">{formatNames(props.worldnews.results[1].byline)}</span></p>
                                     </div>
                                 </article>
                             </Link>
@@ -86,7 +86,7 @@ function Highlights(props: highlightsData) {
                                                 <LazyLoadImage className="headline-3-img" src={props.worldnews.results[3].multimedia[0].url} alt={props.worldnews.results[2].multimedia[0].caption} placeholderSrc={place_holder_img} />
                                             </div>
                                             <p className="highlight-abstract">{props.worldnews.results[3].abstract}</p>
-                                            <p className="time-ago-right-div"><span className="byline-span">{`${getTimeAgo(props.worldnews.results[3].created_date)} . `}</span>
+                                            <p className="time-ago-right-div"><span className="byline-span">{`${getTimeAgo(props.worldnews.results[3].created_date)} .`}</span>
                                                 <span className="byline-span-author">{formatNames(props.worldnews.results[3].byline)}</span>
                                             </p>
                                         </div>

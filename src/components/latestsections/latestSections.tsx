@@ -39,7 +39,7 @@ function LatestSections(props: LatestSectionsProps) {
               }`}
               onClick={() => handleSectionClick("Search")}
             >
-             <span className="search-icon"><img src={searchicon} style={{width:"16px", height:"16px"}} alt="search-icon"></img></span> Search 
+             <span className="search-icon-latest-section"><img src={searchicon} style={{width:"16px", height:"16px"}} alt="search-icon"></img></span> Search 
             </a>
           </li>
         </ul>

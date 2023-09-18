@@ -32,6 +32,7 @@
 .search-icon {
     width: 16px;
     height: 16px;
+ 
 }
 
 .news-section {
@@ -67,7 +68,7 @@
 }
 
 .subscription-button {
-    width: 155px;
+    /* width: 155px; */
     height: 11px;
     background-color: rgb(var(--primaryGray));
     border: 1px solid rgb(var(--secondaryGray));
@@ -75,7 +76,6 @@
     font-weight: 700;
     padding: 8px 12px;
     color: white;
-    margin-right: 7px;
     border-radius: 3px;
     cursor: pointer;
     transition: all 0.6s ease 0s;
@@ -86,6 +86,7 @@
     margin-right: 20px;
     margin-top: 1px;
     line-height: 11px;
+    
 }
 
 .account-div {
@@ -108,7 +109,6 @@
     margin-left: 6px;
     margin-top: 7px;
 }
-
 
 
 
