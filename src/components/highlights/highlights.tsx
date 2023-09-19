@@ -15,81 +15,144 @@ interface highlightsData {
 
 
 function Highlights(props: highlightsData) {
+    if (!props.worldnews) {
+        return (
+            <div className="loading-div-page">
+                We are Loading Most relevant news for you in a moment.
+            </div>
+        );
+    }
 
-    if (props.worldnews) {
+    const consecutiveHeadlines = [];
+    let consecutiveCount = 0;
+
+
+    for (let i = 0; i < props.worldnews.results.length; i++) {
+        const result = props.worldnews.results[i];
+
+        if (
+            result.title &&
+            result.abstract &&
+            result.created_date &&
+            result.multimedia &&
+            result.multimedia[0] &&
+            result.multimedia[1] &&
+            result.multimedia[0].caption &&
+            result.multimedia[1].url &&
+            result.multimedia[0].copyright &&
+            result.byline
+        ) {
+            consecutiveHeadlines.push(result);
+            consecutiveCount++;
+
+            if (consecutiveCount === 4) {
+                break;
+            }
+        }
+    }
+
+
+    if (consecutiveHeadlines.length >= 4) {
         return (
             <section className="collection-highlight-container">
-
                 <div>
                     <ol className="top-highlights-list">
                         <div className="collection-highlight-container-inner-div">
-
-                        <li className="headline-1-li">
-                            <Link to={`/article/${props.worldnews.results[1].byline}`}
-                                className="route-next-page"
-                                state={props.worldnews.results[1]}
-                            >
-                                <article className="highlight-article">                                   
-                                 <figure className="fig-div">
-                                    <div>
-                                        <LazyLoadImage src={props.worldnews.results[1].multimedia[1].url} className="headline-1-img" alt={props.worldnews.results[0].multimedia[0].caption} placeholderSrc={place_holder_img} />
-                                    </div>
-                                    <figcaption className="fig-caption">
-                                        <span>{props.worldnews.results[1].multimedia[0].copyright.toUpperCase()}</span>
-                                    </figcaption>
-                                </figure>
-                                    <div>
-                                        <h3 className="hightlights-title">{props.worldnews.results[1].title}</h3>
-                                        <p className="highlight-abstract">{props.worldnews.results[1].abstract}</p>
-                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[1].created_date)} .`}<span className="byline-span-author">{formatNames(props.worldnews.results[0].byline)?formatNames(props.worldnews.results[0].byline):"By NEW YORK TIMES"}</span></p>
-                                    </div>
-                                </article>
-                            </Link>
-                        </li>
-
-
-
-                        <li className="headline-2-li">
-                            < Link to={`/article/${props.worldnews.results[2].byline}`}
-                                className="route-next-page"
-                                state={props.worldnews.results[2]}>
-                                <article className="highlight-article">
-                                    <figure className="fig-div">
-                                        <div>
-                                            <LazyLoadImage src={props.worldnews.results[2].multimedia[1].url} className="headline-2-img" alt={props.worldnews.results[1].multimedia[0].caption} placeholderSrc={place_holder_img} />
-                                        </div>
-                                        <figcaption className="fig-caption">
-                                            <span>{props.worldnews.results[2].multimedia[0].copyright.toUpperCase()}</span>
-                                        </figcaption>
-                                    </figure>
-                                    <div>
-                                        <h3 className="hightlights-title">{props.worldnews.results[2].title}</h3>
-                                        <p className="highlight-abstract">{props.worldnews.results[2].abstract}</p>
-                                        <p className="time-ago">{`${getTimeAgo(props.worldnews.results[2].created_date)} .`}<span className="byline-span-author">{formatNames(props.worldnews.results[1].byline)}</span></p>
-                                    </div>
-                                </article>
-                            </Link>
-                        </li>
-
+                            {consecutiveHeadlines.slice(0, 2).map((result, index) => (
+                                <li key={result.title} className={`headline-${index + 1}-li`}>
+                                    <Link
+                                        to={`/article/${result.byline}`}
+                                        className="route-next-page"
+                                        state={result}
+                                    >
+                                        <article className="highlight-article">
+                                            <figure className="fig-div">
+                                                <div>
+                                                    <LazyLoadImage
+                                                        src={result.multimedia[1].url}
+                                                        className={`headline-${index + 1}-img`}
+                                                        alt={result.multimedia[0].caption}
+                                                        placeholderSrc={place_holder_img}
+                                                    />
+                                                </div>
+                                                <figcaption className="fig-caption">
+                                                    <span >
+                                                        {result.multimedia[0].copyright.toUpperCase()}
+                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                            <div>
+                                                <h3 className={`hightlights-title`}>
+                                                    {result.title}
+                                                </h3>
+                                                <p className={`highlight-abstract`}>
+                                                    {result.abstract}
+                                                </p>
+                                                <p className={`time-ago`}>
+                                                    <span className="byline-span">
+                                                    {`${getTimeAgo(result.created_date)} .`}
+                                                    </span>
+                                                
+                                                    <span
+                                                        className={`byline-span-author`}
+                                                    >
+                                                        {formatNames(result.byline)
+                                                            ? formatNames(result.byline)
+                                                            : "By NEW YORK TIMES"}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </Link>
+                                </li>
+                            ))}
                         </div>
 
-                        <li className="headline-3-li">
 
+
+                        <li className="headline-3-li">
                             <div className="highlight-right-top-div">
-                                <Link to={`/article/${props.worldnews.results[3].byline}`}
-                                className="route-next-page"
-                                state={props.worldnews.results[3]}>
+                                <Link
+                                    to={`/article/${consecutiveHeadlines[3].byline}`}
+                                    className="route-next-page"
+                                    state={consecutiveHeadlines[3]}
+                                >
                                     <article className="highlight-article">
+
                                         <div>
-                                            <h3 className="hightlights-title">{props.worldnews.results[3].title}</h3>
+                                            <h3 className="hightlights-title">
+                                                {consecutiveHeadlines[3].title}
+                                            </h3>
                                             <div className="highlights-right-div">
-                                                <LazyLoadImage className="headline-3-img" src={props.worldnews.results[3].multimedia[0].url} alt={props.worldnews.results[2].multimedia[0].caption} placeholderSrc={place_holder_img} />
+                                                <span>
+                                                    <figure className="fig-div">
+                                                        <div>
+                                                            <LazyLoadImage
+                                                                src={consecutiveHeadlines[3].multimedia[1].url}
+                                                                className="headline-3-img"
+                                                                alt={consecutiveHeadlines[3].multimedia[0].caption}
+                                                                placeholderSrc={place_holder_img}
+                                                            />
+                                                        </div>
+                                                        <figcaption className="fig-caption">
+                                                            <span>
+                                                                {consecutiveHeadlines[3].multimedia[0].copyright.toUpperCase()}
+                                                            </span>
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
                                             </div>
-                                            <p className="highlight-abstract">{props.worldnews.results[3].abstract}</p>
-                                            <p className="time-ago-right-div"><span className="byline-span">{`${getTimeAgo(props.worldnews.results[3].created_date)} .`}</span>
-                                                <span className="byline-span-author">{formatNames(props.worldnews.results[3].byline)}</span>
+                                            <p className="highlight-abstract">
+                                                {consecutiveHeadlines[3].abstract}
+                                            </p>
+                                            <p className="time-ago-right-div">
+                                                <span className="byline-span">{`${getTimeAgo(consecutiveHeadlines[3].created_date)} .`} </span>
+                                                <span className="byline-span-author">
+                                                    {formatNames(consecutiveHeadlines[3].byline)}
+                                                </span>
                                             </p>
                                         </div>
+
                                     </article>
                                 </Link>
                             </div>
@@ -97,21 +160,49 @@ function Highlights(props: highlightsData) {
 
 
                             <div className="highlight-right-bottom-div">
-                                <Link to={`/article/${props.worldnews.results[4].byline}`}
-                                className="route-next-page"
-                                state={props.worldnews.results[4]}>
+                                <Link
+                                    to={`/article/${consecutiveHeadlines[2].byline}`}
+                                    className="route-next-page"
+                                    state={consecutiveHeadlines[2]}
+                                >
                                     <article className="highlight-article">
+
                                         <div>
-                                            <h3 className="hightlights-title">{props.worldnews.results[4].title}</h3>
+                                            <h3 className="hightlights-title">
+                                                {consecutiveHeadlines[2].title}
+                                            </h3>
                                             <div className="highlights-right-div">
-                                                <LazyLoadImage className="headline-3-img" src={props.worldnews.results[4].multimedia[2].url} alt={props.worldnews.results[4].multimedia[0].caption} placeholderSrc={place_holder_img} />
+                                                <span>
+                                                    <figure className="fig-div">
+                                                        <div>
+                                                            <LazyLoadImage
+                                                                src={consecutiveHeadlines[2].multimedia[1].url}
+                                                                className="headline-3-img"
+                                                                alt={consecutiveHeadlines[2].multimedia[0].caption}
+                                                                placeholderSrc={place_holder_img}
+                                                            />
+                                                        </div>
+                                                        <figcaption className="fig-caption">
+                                                            <span className="highlight-right-div-caption-span">
+                                                                {consecutiveHeadlines[2].multimedia[0].copyright.toUpperCase()}
+                                                            </span>
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
                                             </div>
-                                            <p className="highlight-abstract">{props.worldnews.results[4].abstract}</p>
+                                            <p className="highlight-abstract">
+                                                {consecutiveHeadlines[3].abstract.length > 80
+                                                    ? consecutiveHeadlines[3].abstract.slice(0, 90) + "."
+                                                    : consecutiveHeadlines[3].abstract}
+                                            </p>
                                             <p className="time-ago-right-div">
-                                                <span className="byline-span">{`${getTimeAgo(props.worldnews.results[4].created_date)} .`}</span>
-                                                <span className="byline-span-author">{formatNames(props.worldnews.results[4].byline)}</span>
+                                                <span className="byline-span">{`${getTimeAgo(consecutiveHeadlines[2].created_date)} .`} </span>
+                                                <span className="byline-span-author">
+                                                    {formatNames(consecutiveHeadlines[2].byline)}
+                                                </span>
                                             </p>
                                         </div>
+
                                     </article>
                                 </Link>
                             </div>
@@ -121,21 +212,23 @@ function Highlights(props: highlightsData) {
                         </li>
                     </ol>
                 </div>
-                <div></div>
-                <div></div>
-            </section>
 
-        )
+            </section>
+        );
     } else {
         return (
             <div className="loading-div-page">
-                We are Loading Most releveant news for you in a moment.
+                We are Loading Most relevant news for you in a moment.
             </div>
-        )
+        );
     }
-
-
 }
 
-export default Highlights
+export default Highlights;
+
+
+
+
+
+
 
