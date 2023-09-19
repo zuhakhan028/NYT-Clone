@@ -23,7 +23,7 @@ function EachCountryNews(props: eachCountryNews) {
         setActiveSection(section);
     };
     let CountryNewsData: EachCountryNewsDataResults[] = props.data?.response?.docs || [];
-
+    let contryNewsDataLength=CountryNewsData.length-1
 
     if(CountryNewsData){
 return(
@@ -62,7 +62,7 @@ return(
                     console.log(item)
                     return(
                        
-                    <li key={index} className={"latest-section-list"}>
+                    <li key={index} className={contryNewsDataLength==index?"last-list-item":"latest-section-list"}>
                     <div className="formatted-date">
                         {formatDate(item.pub_date)
                  

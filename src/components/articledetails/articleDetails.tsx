@@ -76,7 +76,7 @@ if (metaDescription) {
                                 <span className="article-formatted-date-span">{`Updated ${formatDateTime(worldnews.updated_date)}`}</span></div>
 
                             <div className="article-paragraph-content">
-                                {splitStringIntoParagraphs(articleBody, worldnews.multimedia[1].url)}
+                                {splitStringIntoParagraphs(articleBody, worldnews.multimedia[1].url,worldnews.multimedia[1].caption)}
                             </div>
 
                         </div>

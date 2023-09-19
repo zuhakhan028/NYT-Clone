@@ -38,6 +38,9 @@ function CountryArticle() {
     ? `https://static01.nyt.com/${multimediaItem.legacy.xlarge}`
     : place_holder_img;
 
+
+    console.log(multimediaItem)
+
   return (
     <div className="each-article-main-div">
       <Header text={subsectionName.toUpperCase()} />
@@ -53,15 +56,15 @@ function CountryArticle() {
                 <div>
                   <LazyLoadImage
                     className="article-main-img"
-                    src={xlargeUrl}
-                    alt={multimediaItem ? multimediaItem.caption : ""}
+                    src={xlargeUrl ? xlargeUrl:place_holder_img}
+                    alt={multimediaItem ? multimediaItem.caption : "img-not-availabe"}
                     placeholderSrc={place_holder_img}
                   />
                 </div>
                 <figcaption className="article-fig-caption">
-                  {multimediaItem ? multimediaItem.caption : "Caption Not available"}
+                  {multimediaItem.caption ? multimediaItem.caption : "New York Times Cover."}
                   <span className="article-img-copyright">
-                    {multimediaItem ? multimediaItem.copyright : ""}
+                    {multimediaItem.copyright ? multimediaItem.copyright : " credits NYT"}
                   </span>
                 </figcaption>
               </figure>
@@ -73,9 +76,10 @@ function CountryArticle() {
                 {formatDate(pubDate)}
                 <span className="article-formatted-date-span">{`Updated ${formatDateTime(pubDate)}`}</span>
               </div>
-              <p className="article-paragraph-content">
-                {splitStringIntoParagraphs(articleBody, multimediaItem ? multimediaItem.url : "")}
-              </p>
+              <div className="article-paragraph-content">
+                {splitStringIntoParagraphs(articleBody, multimediaItem ? xlargeUrl:place_holder_img ,
+                 multimediaItem.legacy.xlarge.caption?multimediaItem.legacy.xlarge.caption:"caption-not-available")}
+              </div>
             </div>
             <CommentsButton />
             <div className="article-end-cta-div">
