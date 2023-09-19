@@ -50,6 +50,7 @@ function LatestSectionList(props: LatestSectionListProps) {
                           <div className="article-latest-section-inner-div">
                             <h3 className="dispatch-title-h3">{item.title}</h3>
                             <p className="latest-list-section-abstract">{item.abstract}</p>
+                            <div className="byline-span-author">{formatNames(item.byline)}</div>
                           </div>
                           <div>
                             <figure className="latest-list-section-figure">

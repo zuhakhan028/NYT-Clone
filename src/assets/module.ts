@@ -42,7 +42,7 @@ export interface EachCountryNewsDataResults{
         url:string;
         multimedia:multiMediaList[];
         headline:HeadlineData;
-        byline:string;
+        byline:{original:string};
         pub_date:string;
      
 

@@ -212,3 +212,59 @@
     }
     
 }
+
+@media screen and (max-width:700px){
+    .header{
+        width: 97vw;
+    }
+   
+    .search-icon {
+        display: none;
+    } 
+
+    .subscription-button{
+        display: none;
+    }
+
+    .news-section{
+        display: none;
+    }
+   
+
+    .inner-header-div {
+       display: flex;
+       width: 96vw;
+       justify-content: left;
+       padding: 20px;
+       
+    }
+
+    .header-left-section{
+        margin-right: 25%;
+    }
+    .logo-icon {
+        width: 225px;
+        height: 30px;
+        margin-top: 8px;
+     
+      
+    }
+    .profile-icon-img{
+       width: 24px;
+       height: 24px;
+       display: inline-block;
+       margin-top: 10px;
+       cursor: pointer;
+   
+       
+    }
+
+    .account-div{
+        display: none;
+    }
+   
+    .header-middle-section{
+        margin-right: 180px;
+    }
+    
+}

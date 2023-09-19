@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import placeholder_img from "../../assets/images/placeholder-image.png"
+import { formatNames } from "../formatNames";
 
 interface eachCountryNews {
     data: EachCountryNewsData | undefined
@@ -26,6 +27,7 @@ function EachCountryNews(props: eachCountryNews) {
     let contryNewsDataLength=CountryNewsData.length-1
 
     if(CountryNewsData){
+        
 return(
     <section className="latest-section-each-country">
     <nav>
@@ -77,6 +79,7 @@ return(
                             <div className="article-latest-section-inner-div">
                                 <h3 className="dispatch-title-h3">{item.headline.main}</h3>
                                 <p className="latest-list-section-abstract">{item.abstract}</p>
+                                <div className="byline-span-author">{formatNames(item.byline.original )}</div>
                             </div>
 
 
@@ -141,6 +144,7 @@ return(
                             <div className="article-latest-section-inner-div">
                                 <h3 className="dispatch-title-h3">{item.headline.main}</h3>
                                 <p className="latest-list-section-abstract">{item.abstract}</p>
+                                <div className="byline-span-author">{formatNames(item.byline.original)}</div>
                             </div>
 
 
